@@ -1,0 +1,51 @@
+/* Post.module.css */
+.post_container {
+    text-align: center;
+  }
+  
+  .post_container h3 {
+    margin-bottom: 0.2em;
+  }
+  
+  .post_container .tags {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tags p {
+    margin-right: 1em;
+  }
+  
+  .tags span {
+    font-weight: bold;
+  }
+  
+  /* Adicionando estilos para a imagem */
+  .image_container {
+    width: 70%; /* Largura desejada da imagem em relação à largura da página */
+    max-height: 600px; /* Altura máxima desejada */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    overflow: hidden; /* Para cortar a parte vertical se necessário */
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%; /* Isso fará com que a imagem preencha completamente o contêiner */
+    object-position: center; /* Garante que a parte mostrada seja o centro da imagem */
+    object-fit: cover; /* Preenche o contêiner mantendo a proporção e cortando o excesso */
+    display: block;
+  }
+
+  /*  tambem funciona para definir padrao para imagem 
+  .image_container {
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;  Ajusta a largura máxima da imagem para o tamanho do contêiner pai 
+  height: auto;  Garante que a altura seja ajustada automaticamente proporcionalmente à largura 
+  display: inline-block; /* Permite centralizar horizontalmente usando text-align: center no contêiner pai 
+  margin: 0 auto;  Centraliza horizontalmente 
+}
+  
+  */

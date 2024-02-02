@@ -105,6 +105,9 @@ export const useAuthentication = () => {
             await signInWithEmailAndPassword(auth, data.email, data.password);
 
         } catch (error) {
+            console.log("Full error message: ", error.message);
+            console.log(typeof error.message);
+            console.log(error.message.includes("user-not"));
             let systemErrorMessage ;
 
             if (error.message.includes("user-not-found")) {
@@ -118,9 +121,11 @@ export const useAuthentication = () => {
             else {
                 systemErrorMessage = "Ocorreu um erro, por favor, tente mais tarde"
             }
+            setError(systemErrorMessage);
 
             
         }
+        setLoading(false)
     }
     
     useEffect(() => {
